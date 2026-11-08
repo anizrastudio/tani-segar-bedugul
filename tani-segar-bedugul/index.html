@@ -101,9 +101,10 @@
 
                 <div class="hero__media">
                     <div class="media-frame">
-                        <div class="photo-slot" role="img" aria-label="Pemandangan kebun sayur dataran tinggi (menyusul)">
-                            <span>Video: kebun sayur</span>
-                        </div>
+                        <picture class="hero__poster">
+                            <source media="(min-width: 900px)" srcset="assets/img/hero-tall-960.webp" width="960" height="1200">
+                            <img src="assets/img/hero-wide-800.webp" srcset="assets/img/hero-wide-480.webp 480w, assets/img/hero-wide-800.webp 800w" sizes="100vw" width="800" height="600" alt="Kebun sayur bertingkat di lereng dataran tinggi">
+                        </picture>
                         <!-- Video dimuat oleh JavaScript, kecuali pengunjung mematikan animasi atau memakai mode hemat data -->
                         <video class="hero__video" data-src="assets/video/hero.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
                         <button class="video-toggle" type="button" aria-label="Jeda video" hidden>
@@ -126,7 +127,7 @@
 
                 <ul class="products">
                     <li class="product reveal reveal-zoom" style="--delay: 0.0s">
-                        <div class="photo-slot zoom" role="img" aria-label="Foto wortel (menyusul)"><span>Foto: wortel</span></div>
+                        <img class="zoom" src="assets/img/wortel-800.webp" srcset="assets/img/wortel-480.webp 480w, assets/img/wortel-800.webp 800w" sizes="(min-width: 1200px) 380px, (min-width: 900px) 30vw, (min-width: 640px) 45vw, 100vw" width="800" height="600" loading="lazy" alt="Wortel segar dengan daun, tersusun di dalam peti kayu">
                         <div class="product__body">
                             <h3>Wortel</h3>
                             <p class="product__grade">Dicuci · grade A dan B</p>
@@ -139,7 +140,7 @@
                     </li>
 
                     <li class="product reveal reveal-zoom" style="--delay: 0.1s">
-                        <div class="photo-slot zoom" role="img" aria-label="Foto kubis (menyusul)"><span>Foto: kubis</span></div>
+                        <img class="zoom" src="assets/img/kubis-800.webp" srcset="assets/img/kubis-480.webp 480w, assets/img/kubis-800.webp 800w" sizes="(min-width: 1200px) 380px, (min-width: 900px) 30vw, (min-width: 640px) 45vw, 100vw" width="800" height="600" loading="lazy" alt="Hamparan kubis hijau di kebun">
                         <div class="product__body">
                             <h3>Kubis</h3>
                             <p class="product__grade">Kepala padat · 1–2 kg per buah</p>
@@ -152,7 +153,7 @@
                     </li>
 
                     <li class="product reveal reveal-zoom" style="--delay: 0.2s">
-                        <div class="photo-slot zoom" role="img" aria-label="Foto brokoli (menyusul)"><span>Foto: brokoli</span></div>
+                        <img class="zoom" src="assets/img/brokoli-800.webp" srcset="assets/img/brokoli-480.webp 480w, assets/img/brokoli-800.webp 800w" sizes="(min-width: 1200px) 380px, (min-width: 900px) 30vw, (min-width: 640px) 45vw, 100vw" width="800" height="600" loading="lazy" alt="Kuntum brokoli segar berwarna hijau">
                         <div class="product__body">
                             <h3>Brokoli</h3>
                             <p class="product__grade">Kuntum rapat · hijau tua</p>
@@ -165,7 +166,7 @@
                     </li>
 
                     <li class="product reveal reveal-zoom" style="--delay: 0.0s">
-                        <div class="photo-slot zoom" role="img" aria-label="Foto selada (menyusul)"><span>Foto: selada</span></div>
+                        <img class="zoom" src="assets/img/selada-800.webp" srcset="assets/img/selada-480.webp 480w, assets/img/selada-800.webp 800w" sizes="(min-width: 1200px) 380px, (min-width: 900px) 30vw, (min-width: 640px) 45vw, 100vw" width="800" height="600" loading="lazy" alt="Daun selada hijau yang segar">
                         <div class="product__body">
                             <h3>Selada</h3>
                             <p class="product__grade">Romaine dan keriting</p>
@@ -178,7 +179,7 @@
                     </li>
 
                     <li class="product reveal reveal-zoom" style="--delay: 0.1s">
-                        <div class="photo-slot zoom" role="img" aria-label="Foto tomat (menyusul)"><span>Foto: tomat</span></div>
+                        <img class="zoom" src="assets/img/tomat-800.webp" srcset="assets/img/tomat-480.webp 480w, assets/img/tomat-800.webp 800w" sizes="(min-width: 1200px) 380px, (min-width: 900px) 30vw, (min-width: 640px) 45vw, 100vw" width="800" height="600" loading="lazy" alt="Tomat merah matang di dalam krat plastik">
                         <div class="product__body">
                             <h3>Tomat</h3>
                             <p class="product__grade">Merah matang dan setengah matang</p>
@@ -192,7 +193,7 @@
 
                     <li class="product reveal reveal-zoom" style="--delay: 0.2s">
                         <span class="badge">Musiman</span>
-                        <div class="photo-slot zoom" role="img" aria-label="Foto stroberi (menyusul)"><span>Foto: stroberi</span></div>
+                        <img class="zoom" src="assets/img/stroberi-800.webp" srcset="assets/img/stroberi-480.webp 480w, assets/img/stroberi-800.webp 800w" sizes="(min-width: 1200px) 380px, (min-width: 900px) 30vw, (min-width: 640px) 45vw, 100vw" width="800" height="600" loading="lazy" alt="Stroberi segar di dalam kotak kardus">
                         <div class="product__body">
                             <h3>Stroberi</h3>
                             <p class="product__grade">Segar petik · ukuran sedang–besar</p>
@@ -275,17 +276,17 @@
 
                 <ol class="process">
                     <li class="process__step reveal reveal-zoom" style="--delay: 0.00s">
-                        <div class="process__media"><div class="photo-slot zoom" role="img" aria-label="Foto panen sayur (menyusul)"><span>Foto: panen</span></div></div>
+                        <div class="process__media"><img class="zoom" src="assets/img/panen-800.webp" srcset="assets/img/panen-480.webp 480w, assets/img/panen-800.webp 800w" sizes="(min-width: 1200px) 380px, (min-width: 900px) 30vw, (min-width: 640px) 45vw, 100vw" width="800" height="600" loading="lazy" alt="Petani memetik sayur daun ke dalam keranjang biru"></div>
                         <h3>Panen pagi</h3>
                         <p>Sayur dipetik antara pukul 05.00 dan 08.00, saat udara Bedugul masih sejuk, agar tetap renyah.</p>
                     </li>
                     <li class="process__step reveal reveal-zoom" style="--delay: 0.12s">
-                        <div class="process__media"><div class="photo-slot zoom" role="img" aria-label="Foto sayur dalam krat (menyusul)"><span>Foto: sortir &amp; kemas</span></div></div>
+                        <div class="process__media"><img class="zoom" src="assets/img/kemas-800.webp" srcset="assets/img/kemas-480.webp 480w, assets/img/kemas-800.webp 800w" sizes="(min-width: 1200px) 380px, (min-width: 900px) 30vw, (min-width: 640px) 45vw, 100vw" width="800" height="600" loading="lazy" alt="Pekerja menata sayur daun segar di area pengemasan"></div>
                         <h3>Sortir &amp; kemas</h3>
                         <p>Dipilah per ukuran dan kualitas, ditimbang, lalu dikemas di krat bersih sesuai pesanan.</p>
                     </li>
                     <li class="process__step reveal reveal-zoom" style="--delay: 0.24s">
-                        <div class="process__media"><div class="photo-slot zoom" role="img" aria-label="Foto sayur di dapur restoran (menyusul)"><span>Foto: tiba di dapur</span></div></div>
+                        <div class="process__media"><img class="zoom" src="assets/img/kirim-800.webp" srcset="assets/img/kirim-480.webp 480w, assets/img/kirim-800.webp 800w" sizes="(min-width: 1200px) 380px, (min-width: 900px) 30vw, (min-width: 640px) 45vw, 100vw" width="800" height="600" loading="lazy" alt="Tangan memegang kembang kol segar di meja dapur"></div>
                         <h3>Kirim ke dapur</h3>
                         <p>Diantar dengan mobil bak tertutup dan tiba di dapur Anda di hari yang sama.</p>
                     </li>
@@ -371,7 +372,7 @@
     <footer class="site-footer">
         <div class="container site-footer__inner">
             <p><strong>Tani Segar Bedugul</strong> adalah usaha fiktif. Website ini dibuat oleh <a href="https://anizrastudio.github.io/">Anizra Studio</a> sebagai contoh website untuk pemasok hotel dan restoran.</p>
-            <p class="site-footer__credit">Kredit foto: akan dicantumkan setelah foto dipasang.</p>
+            <p class="site-footer__credit">Foto dan video ilustrasi dari Unsplash dan Pexels.</p>
             <a class="btn btn--primary btn--small" href="https://wa.me/628214222807?text=Halo%20Anizra%20Studio%2C%20saya%20ingin%20website%20seperti%20Tani%20Segar%20Bedugul%20untuk%20usaha%20saya." target="_blank" rel="noopener noreferrer">Ingin website seperti ini?</a>
         </div>
     </footer>

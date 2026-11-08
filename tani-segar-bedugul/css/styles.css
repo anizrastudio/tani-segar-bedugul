@@ -169,19 +169,9 @@ section { padding-block: 4rem; }
 .section-head__lead { color: var(--color-muted); font-size: 1.05rem; }
 .section-head__lead + .section-head__lead { margin-top: 1rem; }
 
-/* Tempat foto sementara: diganti <img> setelah foto tersedia */
-.photo-slot {
-  display: grid;
-  place-items: center;
-  aspect-ratio: 4 / 3;
-  background:
-    repeating-linear-gradient(135deg, rgba(47, 107, 58, 0.06) 0 12px, transparent 12px 24px),
-    #E4EADB;
-  color: var(--color-muted);
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-.photo-slot span { padding: 0.35rem 0.75rem; border-radius: 999px; background: rgba(255, 255, 255, 0.8); }
+/* Foto kartu & proses: rasio 4:3 yang seragam */
+.product img,
+.process__media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 
 /* ===== Hero ===== */
 .hero { padding-block: 2.5rem 4rem; }
@@ -199,7 +189,7 @@ section { padding-block: 4rem; }
 }
 .hero__facts dt { color: var(--color-muted); font-size: 0.8rem; }
 .hero__facts dd { margin: 0; font-family: var(--font-heading); font-size: clamp(1.05rem, 0.9rem + 0.8vw, 1.6rem); font-weight: 600; white-space: nowrap; }
-.hero__media .photo-slot { aspect-ratio: 4 / 3; }
+.hero__poster img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 
 /* Bingkai media hero: foto/tempat sementara di bawah, video di atasnya */
 .media-frame { position: relative; overflow: hidden; border-radius: var(--radius-lg); background: #E4EADB; }
@@ -420,7 +410,7 @@ section { padding-block: 4rem; }
   .js .reveal-zoom.is-visible .zoom { scale: 1; }
 
   /* Media hero perlahan mengecil saat halaman dibuka */
-  .media-frame > .photo-slot,
+  .media-frame > .hero__poster,
   .media-frame > .hero__video { animation: settle 1.8s ease both; }
   @keyframes settle {
     from { scale: 1.08; }
@@ -439,7 +429,7 @@ section { padding-block: 4rem; }
   .site-nav { display: flex; gap: 1.75rem; }
   .menu-toggle { display: none; }
   .hero__inner { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: center; gap: 4rem; }
-  .hero__media .photo-slot { aspect-ratio: 4 / 5; }
+  .hero__poster img { aspect-ratio: 4 / 5; }
   .facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .process { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .about { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: 4rem; }

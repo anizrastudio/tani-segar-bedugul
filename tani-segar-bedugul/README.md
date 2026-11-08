@@ -29,18 +29,14 @@ assets/img/       Foto (menyusul)
 - Semua tombol WhatsApp terhubung ke Anizra Studio, bukan ke nomor fiktif.
 - Tidak ada testimoni, logo hotel, atau sertifikat palsu.
 
-## Foto (menyusul)
+## Foto & video
 
-Saat ini setiap foto masih berupa kotak bergaris (`.photo-slot`) dengan label, misalnya "Foto: wortel".
-Setelah foto tersedia, setiap kotak diganti dengan `<img>` berformat WebP, dan nama fotografernya
-dicantumkan di footer (bagian "Kredit foto").
+Foto dan video ilustrasi dari Unsplash dan Pexels (lisensi bebas pakai; kredit umum dicantumkan di footer).
 
-## Video hero (menyusul)
-
-Simpan video sebagai `assets/video/hero.mp4`. Video dimuat oleh JavaScript (`initHeroVideo`)
-dan **tidak dimuat** jika pengunjung mematikan animasi atau memakai mode hemat data.
-Selama video belum ada, yang tampil adalah tempat sementara bertuliskan "Video: kebun sayur".
-Ada tombol jeda/putar di pojok kanan bawah video.
+- `assets/img/<nama>-480.webp` dan `-800.webp`: foto komoditas dan proses, rasio 4:3.
+- `assets/img/hero-wide-*.webp` (HP, 4:3) dan `hero-tall-960.webp` (laptop, 4:5): gambar hero.
+- `assets/video/hero.mp4`: 12 detik, tanpa suara, sekitar 530 KB. Dimuat oleh JavaScript, dan **tidak dimuat**
+  jika pengunjung mematikan animasi atau memakai mode hemat data. Ada tombol jeda/putar.
 
 ## Animasi
 
