@@ -9,8 +9,10 @@
   --color-on-dark-muted: #C9D0C0; /* teks pendukung di atas hijau tua */
   --color-accent: #E9A23B;        /* kuning panen: HANYA dekorasi/ikon, jangan untuk teks di atas krem */
   --color-line: rgba(31, 42, 31, 0.12);
-  --font-heading: 'Fraunces', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  /* Huruf: judul bergaya label kemasan hasil tani, isi yang ramah dan mudah dibaca */
+  --font-heading: 'Bitter', Georgia, serif;
+  --heading-weight: 700;          /* Bitter hanya punya satu ketebalan; jangan diganti 600 */
+  --font-body: 'Figtree', system-ui, sans-serif;
   --radius: 20px;
   --radius-lg: 28px;
 }
@@ -34,7 +36,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 .container { width: min(100% - 2.5rem, 1200px); margin-inline: auto; }
 
-h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.15; }
+h1, h2, h3 { font-family: var(--font-heading); font-weight: var(--heading-weight); line-height: 1.15; }
 
 section { padding-block: 4rem; }
 
@@ -89,7 +91,7 @@ section { padding-block: 4rem; }
   background: var(--color-primary);
   color: #fff;
 }
-.brand__name { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 600; line-height: 1.1; }
+.brand__name { font-family: var(--font-heading); font-size: 1.2rem; font-weight: var(--heading-weight); line-height: 1.1; }
 .brand__name span { color: var(--color-primary); }
 
 .site-nav { display: none; }
@@ -201,7 +203,7 @@ section { padding-block: 4rem; }
 
 .hero__text { max-width: 42rem; text-shadow: 0 1px 12px rgba(0, 0, 0, 0.25); }
 .hero .eyebrow { color: var(--color-accent); }
-.hero h1 { margin-bottom: 1.25rem; font-size: clamp(2.2rem, 1.2rem + 3vw, 3.6rem); letter-spacing: -0.01em; }
+.hero h1 { margin-bottom: 1.25rem; font-size: clamp(2rem, 1.1rem + 2.8vw, 3.4rem); line-height: 1.1; }
 .hero__lead { max-width: 36rem; color: #E7EBE0; font-size: 1.1rem; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; text-shadow: none; }
 .hero .btn--ghost { border-color: rgba(247, 243, 234, 0.85); color: var(--color-bg); }
@@ -216,7 +218,7 @@ section { padding-block: 4rem; }
   border-top: 1px solid rgba(247, 243, 234, 0.3);
 }
 .hero__facts dt { color: #D5DBCC; font-size: 0.8rem; }
-.hero__facts dd { margin: 0; font-family: var(--font-heading); font-size: clamp(1.05rem, 0.9rem + 0.8vw, 1.6rem); font-weight: 600; white-space: nowrap; }
+.hero__facts dd { margin: 0; font-family: var(--font-heading); font-size: clamp(1rem, 0.85rem + 0.8vw, 1.5rem); font-weight: var(--heading-weight); }
 
 .motion-toggle {
   position: absolute;
@@ -357,7 +359,7 @@ section { padding-block: 4rem; }
   background: var(--color-surface);
 }
 .stats dt { color: var(--color-muted); font-size: 0.85rem; }
-.stats dd { margin: 0.25rem 0 0; color: var(--color-primary); font-family: var(--font-heading); font-size: clamp(1.75rem, 1.3rem + 1.5vw, 2.5rem); font-weight: 600; line-height: 1.1; }
+.stats dd { margin: 0.25rem 0 0; color: var(--color-primary); font-family: var(--font-heading); font-size: clamp(1.75rem, 1.3rem + 1.5vw, 2.5rem); font-weight: var(--heading-weight); line-height: 1.1; }
 
 /* Janji kami */
 .promises {
