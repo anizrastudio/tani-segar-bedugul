@@ -34,12 +34,16 @@ assets/img/       Foto (menyusul)
 Foto dan video ilustrasi dari Unsplash dan Pexels (lisensi bebas pakai; kredit umum dicantumkan di footer).
 
 - `assets/img/<nama>-480.webp` dan `-800.webp`: foto komoditas dan proses, rasio 4:3.
-- `assets/img/hero-wide-*.webp` (HP, 4:3) dan `hero-tall-960.webp` (laptop, 4:5): gambar hero.
-- `assets/video/hero.mp4`: 12 detik, tanpa suara, sekitar 530 KB. Dimuat oleh JavaScript, dan **tidak dimuat**
-  jika pengunjung mematikan animasi atau memakai mode hemat data. Ada tombol jeda/putar.
+- Hero memakai foto/video sebagai **latar belakang tulisan**, dengan lapisan gelap agar tulisan selalu terbaca.
+  - `assets/img/hero-portrait-720.webp` (layar tegak/HP) dan `hero-wide-1280/1920.webp` (layar lebar/laptop).
+  - `assets/video/hero-portrait.mp4`: video tegak untuk HP, 12 detik, tanpa suara, sekitar 520 KB.
+  - Video lebar untuk laptop **belum ada**. Setelah tersedia, simpan sebagai `assets/video/hero-wide.mp4` lalu isi
+    `data-src-wide="assets/video/hero-wide.mp4"` pada tag `<video>`. Sampai saat itu, laptop menampilkan foto yang bergerak sangat pelan.
+  - Video tidak dimuat jika pengunjung mematikan animasi atau memakai mode hemat data, dan berhenti saat hero tidak terlihat.
+    Tombol jeda di pojok kanan bawah menghentikan video maupun gerakan foto.
 
 ## Animasi
 
-Elemen dengan kelas `.reveal` muncul perlahan saat di-scroll. Foto dengan kelas `.zoom`
+Elemen dengan kelas `.reveal` muncul perlahan saat di-scroll, baik ke bawah maupun ke atas (arah datangnya mengikuti arah scroll). Foto dengan kelas `.zoom`
 di dalam `.reveal-zoom` sedikit "zoom out" saat muncul. Semua animasi otomatis mati
 bagi pengunjung yang memilih "kurangi animasi" di perangkatnya.

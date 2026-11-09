@@ -69,6 +69,15 @@
     <main id="konten">
         <!-- ===== Hero ===== -->
         <section class="hero" id="top">
+            <!-- Latar hero: foto (selalu ada) + video di atasnya (dimuat oleh JavaScript) -->
+            <div class="hero__bg" aria-hidden="true">
+                <picture class="hero__poster">
+                    <source media="(min-aspect-ratio: 4/5)" srcset="assets/img/hero-wide-1280.webp 1280w, assets/img/hero-wide-1920.webp 1920w" sizes="100vw">
+                    <img src="assets/img/hero-portrait-720.webp" width="720" height="1280" alt="" fetchpriority="high">
+                </picture>
+                <video class="hero__video" data-src-portrait="assets/video/hero-portrait.mp4" data-src-wide="" muted loop playsinline preload="none"></video>
+            </div>
+
             <div class="container hero__inner">
                 <div class="hero__text">
                     <p class="eyebrow">Kelompok tani sayur · Bedugul, Bali</p>
@@ -98,22 +107,12 @@
                         </div>
                     </dl>
                 </div>
-
-                <div class="hero__media">
-                    <div class="media-frame">
-                        <picture class="hero__poster">
-                            <source media="(min-width: 900px)" srcset="assets/img/hero-tall-960.webp" width="960" height="1200">
-                            <img src="assets/img/hero-wide-800.webp" srcset="assets/img/hero-wide-480.webp 480w, assets/img/hero-wide-800.webp 800w" sizes="100vw" width="800" height="600" alt="Kebun sayur bertingkat di lereng dataran tinggi">
-                        </picture>
-                        <!-- Video dimuat oleh JavaScript, kecuali pengunjung mematikan animasi atau memakai mode hemat data -->
-                        <video class="hero__video" data-src="assets/video/hero.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
-                        <button class="video-toggle" type="button" aria-label="Jeda video" hidden>
-                            <svg class="icon icon--pause" aria-hidden="true"><use href="#i-pause"></use></svg>
-                            <svg class="icon icon--play" aria-hidden="true"><use href="#i-play"></use></svg>
-                        </button>
-                    </div>
-                </div>
             </div>
+
+            <button class="motion-toggle" type="button" aria-label="Jeda animasi latar" hidden>
+                <svg class="icon icon--pause" aria-hidden="true"><use href="#i-pause"></use></svg>
+                <svg class="icon icon--play" aria-hidden="true"><use href="#i-play"></use></svg>
+            </button>
         </section>
 
         <!-- ===== Komoditas ===== -->
