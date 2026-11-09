@@ -73,17 +73,26 @@ function initHeroBackground() {
 
   if (saveData) return; // mode hemat data: foto saja
 
-  const isWide = window.matchMedia('(min-aspect-ratio: 4/5)').matches;
-  const src = isWide ? video.dataset.srcWide : video.dataset.srcPortrait;
-  if (!src) return; // belum ada video untuk bentuk layar ini: foto bergerak pelan
+  // Layar lebar memakai video lebar jika ada; jika belum ada, video tegak dipakai juga (dipotong otomatis)
+  const wideQuery = window.matchMedia('(min-aspect-ratio: 4/5)');
+  function pickSource() {
+    return (wideQuery.matches && video.dataset.srcWide) || video.dataset.srcPortrait;
+  }
 
   video.addEventListener('canplay', () => {
     hero.classList.add('has-video');
     if (!hero.classList.contains('is-paused')) video.play().catch(() => {});
-  }, { once: true });
+  });
 
-  video.src = src;
-  video.load();
+  function loadVideo() {
+    const src = pickSource();
+    if (!src || video.getAttribute('src') === src) return;
+    video.src = src;
+    video.load();
+  }
+  loadVideo();
+  // Bentuk layar berubah (HP diputar, jendela diubah ukurannya): ganti video bila perlu
+  wideQuery.addEventListener('change', loadVideo);
 
   // Hemat baterai: video berhenti saat hero tidak terlihat
   if ('IntersectionObserver' in window) {

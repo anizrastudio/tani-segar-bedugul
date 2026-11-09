@@ -72,10 +72,10 @@
             <!-- Latar hero: foto (selalu ada) + video di atasnya (dimuat oleh JavaScript) -->
             <div class="hero__bg" aria-hidden="true">
                 <picture class="hero__poster">
-                    <source media="(min-aspect-ratio: 4/5)" srcset="assets/img/hero-wide-1280.webp 1280w, assets/img/hero-wide-1920.webp 1920w" sizes="100vw">
-                    <img src="assets/img/hero-portrait-720.webp" width="720" height="1280" alt="" fetchpriority="high">
+                    <source media="(min-aspect-ratio: 4/5)" srcset="assets/img/hero-wide-1280.webp" width="1280" height="720">
+                    <img src="assets/img/hero-portrait-406.webp" width="406" height="720" alt="" fetchpriority="high">
                 </picture>
-                <video class="hero__video" data-src-portrait="assets/video/hero-portrait.mp4" data-src-wide="" muted loop playsinline preload="none"></video>
+                <video class="hero__video" data-src-portrait="assets/video/hero-portrait.mp4" data-src-wide="assets/video/hero-wide.mp4" muted loop playsinline preload="none"></video>
             </div>
 
             <div class="container hero__inner">

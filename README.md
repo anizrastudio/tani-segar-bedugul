@@ -35,10 +35,9 @@ Foto dan video ilustrasi dari Unsplash dan Pexels (lisensi bebas pakai; kredit u
 
 - `assets/img/<nama>-480.webp` dan `-800.webp`: foto komoditas dan proses, rasio 4:3.
 - Hero memakai foto/video sebagai **latar belakang tulisan**, dengan lapisan gelap agar tulisan selalu terbaca.
-  - `assets/img/hero-portrait-720.webp` (layar tegak/HP) dan `hero-wide-1280/1920.webp` (layar lebar/laptop).
-  - `assets/video/hero-portrait.mp4`: video tegak untuk HP, 12 detik, tanpa suara, sekitar 520 KB.
-  - Video lebar untuk laptop **belum ada**. Setelah tersedia, simpan sebagai `assets/video/hero-wide.mp4` lalu isi
-    `data-src-wide="assets/video/hero-wide.mp4"` pada tag `<video>`. Sampai saat itu, laptop menampilkan foto yang bergerak sangat pelan.
+  - `assets/video/hero-wide.mp4` (layar lebar/laptop, 1280×720) dan `hero-portrait.mp4` (layar tegak/HP, potongan dari video yang sama).
+    Keduanya 9 detik, tanpa suara, dan berulang tanpa sambungan yang terlihat (akhir video melebur ke awal).
+  - `assets/img/hero-wide-1280.webp` dan `hero-portrait-406.webp`: bingkai pertama video, tampil sebelum video selesai dimuat.
   - Video tidak dimuat jika pengunjung mematikan animasi atau memakai mode hemat data, dan berhenti saat hero tidak terlihat.
     Tombol jeda di pojok kanan bawah menghentikan video maupun gerakan foto.
 
