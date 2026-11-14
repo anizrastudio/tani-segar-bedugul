@@ -2,8 +2,11 @@
 
 File ini dibaca otomatis oleh Claude Code setiap kali proyek ini dibuka.
 
+> Repo GitHub ini **publik**. Jangan menulis data rahasia (password, API key, data klien) di file mana pun di proyek ini.
+> File `_config.yml` mencegah file `CLAUDE.md` dan `README.md` ikut tayang di GitHub Pages. Jangan dihapus.
+
 ## 1. Tentang pemilik
-- Pemilik: pebisnis pemula, **bukan programmer**. Jelaskan dalam **Bahasa Indonesia sederhana**. Kode tetap dalam bahasa Inggris.
+- Pemilik fokus pada sisi bisnis. Jelaskan dalam **Bahasa Indonesia sederhana**. Kode tetap dalam bahasa Inggris.
 - Pola kerja: **Claude yang menulis kode, pemilik yang memeriksa (review)**.
 
 ## 2. Aturan wajib sebelum commit
